@@ -1,0 +1,26 @@
+.sellerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+  position: relative;
+  .number {
+    font-size: 1rem;
+    color: #818182;
+  }
+  .fas {
+    position: absolute;
+    top: 26px;
+    left: 61px;
+    color: yellow;
+  }
+  .info {
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
+      color: #818182;
+    }
+  }
+}

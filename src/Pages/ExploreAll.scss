@@ -1,0 +1,14 @@
+.explorePage {
+  display: flex;
+  margin-top: 0.1rem;
+  .filters {
+    flex: 0.3;
+    border-right: 1px solid #a8a8a8;
+    height: 89vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .navigations {
+    flex: 0.7;
+  }
+}

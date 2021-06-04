@@ -1,0 +1,141 @@
+.homePage {
+  margin: 2rem auto;
+
+  .container {
+    width: 95%;
+    margin: auto;
+
+    .mainCards {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding-left: 1rem;
+      overflow-x: scroll;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      //   box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #cccccc;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #cccccc;
+    }
+
+    .topSellers {
+      margin-top: 2rem;
+
+      .heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .sellersCards {
+        display: grid;
+        grid-template-columns: repeat(5, 16rem);
+        padding-left: 1rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 1rem;
+        padding-bottom: 1.6rem;
+      }
+    }
+
+    .LiveAuctions {
+      margin: 2rem auto;
+      h2 {
+        text-align: start;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+      }
+      .auctionsCards {
+        display: flex;
+        gap: 20px;
+        overflow-y: hidden;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .quickTabs {
+      margin: 4rem auto;
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 420px) {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-left: 1rem;
+        }
+
+        h2 {
+          text-align: start;
+          font-size: 1.8rem;
+          margin: 0;
+          margin-bottom: 2.5rem;
+        }
+
+        .scrollBar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.5rem;
+          width: 75%;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          margin-bottom: 0;
+          padding-bottom: 1.5rem;
+
+          @media (max-width: 420px) {
+            width: 95%;
+          }
+        }
+        .filter {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding: 0.4rem 0.8rem;
+          width: 100px;
+          cursor: pointer;
+
+          .filtering {
+            @media (max-width: 420px) {
+              display: none;
+            }
+          }
+
+          h5 {
+            margin: 0;
+          }
+        }
+        .rightMostTab {
+          margin-bottom: 2.3rem;
+          width: 110px;
+
+          @media (max-width: 420px) {
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
