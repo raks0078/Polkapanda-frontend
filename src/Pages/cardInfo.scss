@@ -1,0 +1,162 @@
+.cardInfo {
+  display: flex;
+  height: 80vh;
+  margin-top: 1rem;
+  position: relative;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: 90vh;
+  }
+
+  .image {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    img {
+      width: 370px;
+      @media (max-width: 600px) {
+        width: 200px;
+      }
+    }
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  .infoContainer {
+    width: 40%;
+    margin-top: 2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    .infoWrapper {
+      width: 90%;
+      margin: auto;
+      .infoHeader {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        h3 {
+          font-size: 1.5rem;
+          @media (max-width: 600px) {
+            font-size: 1.2rem;
+          }
+        }
+        .likes {
+          display: flex;
+          justify-content: space-between;
+          border: 1px solid brown;
+          border-radius: 5rem;
+          padding: 0.5rem 0.7rem;
+          width: 50px;
+        }
+      }
+
+      .subHeader {
+        .availables {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 50%;
+          font-size: 0.9rem;
+          span {
+            font-weight: bolder;
+          }
+          .green {
+            color: #818182;
+            font-weight: bolder;
+          }
+        }
+
+        .categoryType {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding: 0.4rem 1rem;
+          margin: 1rem 0;
+          width: 60px;
+          cursor: pointer;
+
+          h5 {
+            margin: 0;
+          }
+        }
+      }
+
+      .saleToCreator {
+        background-color: #e8f7fd;
+        border-radius: 2rem;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 1rem;
+        span {
+          font-weight: bold;
+        }
+      }
+
+      .names {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-top: 2rem;
+        .namebox {
+          h4 {
+            font-size: 0.8rem;
+            color: #818182;
+            margin-bottom: 1rem;
+          }
+
+          .info {
+            display: flex;
+            align-items: center;
+            h3 {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// inside the papper..........................
+.bidHeader {
+  display: flex;
+  margin-bottom: 2rem;
+  .bidInfo {
+    margin-left: 1.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+  .buy {
+    border-radius: 1.3rem;
+    background-color: #0066ff;
+    color: #cce0ff;
+    font-weight: bolder;
+    padding: 9px 27px;
+  }
+  .bid {
+    border-radius: 1.3rem;
+    background-color: #cce0ff;
+    color: #0066ff;
+    font-weight: bolder;
+    padding: 9px 27px;
+  }
+}

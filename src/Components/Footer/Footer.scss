@@ -1,0 +1,83 @@
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background-color: #f2f2f2;
+  .footerContainer {
+    width: 90%;
+    margin: auto;
+    .upperFooter {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 1rem;
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1.5rem;
+      }
+      .email {
+        .email_Box {
+          position: relative;
+
+          input {
+            outline: none;
+            border: none;
+            border-radius: 1.2rem;
+            height: 2rem;
+            font-size: 1.1rem;
+            padding: 0.3rem 1rem;
+          }
+
+          h4 {
+            position: absolute;
+            top: 0;
+            right: 40px;
+            margin: 0;
+            background-color: #0d6eff;
+            color: #fff;
+            width: 60px;
+            font-size: 1.1rem;
+            padding: 0.3rem 1rem;
+            border-radius: 1.2rem;
+            height: 2rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .lowerFooter {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin-top: 1rem;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        width: 100%;
+      }
+      h4 {
+        color: #7e7e7f;
+      }
+    }
+  }
+}
+
+.footerSubHeading {
+  margin-bottom: 1rem;
+  @media (max-width: 600px) {
+    margin-bottom: 0.6rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+  li {
+    color: #7e7e7f;
+    font-weight: bold;
+  }
+}
+
+.subFooter {
+  justify-self: center;
+  @media (max-width: 600px) {
+    justify-self: start;
+  }
+}

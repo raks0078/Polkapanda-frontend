@@ -1,0 +1,19 @@
+.collection {
+  .image {
+    img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+    }
+  }
+  .collectionInfo {
+    margin-top: 1rem;
+    h1 {
+      text-align: center;
+    }
+    p {
+      margin: 3rem auto;
+      text-align: center;
+    }
+  }
+}

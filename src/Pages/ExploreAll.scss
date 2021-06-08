@@ -1,14 +1,92 @@
 .explorePage {
   display: flex;
+  gap: 1rem;
   margin-top: 0.1rem;
   .filters {
-    flex: 0.3;
+    // flex: 0.3;
     border-right: 1px solid #a8a8a8;
     height: 89vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    width: 27%;
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    //   box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+  }
+
   .navigations {
-    flex: 0.7;
+    width: 73%;
+    .quickTabs {
+      margin-top: 1rem;
+      width: 100%;
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 420px) {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-left: 1rem;
+        }
+
+        .scrollBar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.5rem;
+          width: 100%;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          margin-bottom: 0;
+          padding-bottom: 1.5rem;
+
+          @media (max-width: 420px) {
+            width: 95%;
+          }
+        }
+        .filter {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding: 0.4rem 1rem;
+          width: 300px;
+          cursor: pointer;
+
+          h5 {
+            margin: 0;
+          }
+        }
+        ul {
+          list-style-type: none;
+        }
+      }
+      // .cards {
+      //   overflow-y: scroll;
+      //   overflow-x: hidden;
+      //   height: 68vh;
+      //   padding: 1rem;
+      // }
+    }
   }
 }

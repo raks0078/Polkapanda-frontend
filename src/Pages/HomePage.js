@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import MainCard from '../Components/MainCards/MainCard'
 import "./homePage.scss"
 
@@ -8,7 +8,7 @@ import {
   Route,
   Link,
   useRouteMatch,
-  useParams
+  useParams,
 } from "react-router-dom";
 
 // Material UI imports............................
@@ -53,6 +53,10 @@ function HomePage() {
   const match = useRouteMatch();
 
   const [age, setAge] = React.useState('');
+  const catego=useParams();
+  useEffect(() => {
+      console.log(catego);
+   }, [])
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -159,17 +163,17 @@ function HomePage() {
                     <ul className="scrollBar">
 
                       <li className="filter">
-                      <Link to="/collections/art"><h5>All</h5></Link>
+                      <Link to="/"><h5>All</h5></Link>
                       </li>
                       
                       <li className="filter">
                         <TuneIcon />
-                        <Link to='/collections/art'><h5>Art</h5></Link>
+                        <Link to='/art'><h5>Art</h5></Link>
                         
                       </li>
                       <li className="filter">
                         <TuneIcon />
-                        <Link to="/?category=photo"><h5>Photography</h5></Link>
+                        <Link to="/photo"><h5>Photography</h5></Link>
                         
                       </li>
                       <li className="filter">
@@ -213,19 +217,19 @@ function HomePage() {
                     <Route exact path="/">
                       <All />
                     </Route>
-                    <Route exact path="/collections/:category">
+                    <Route exact path="/:category">
                       <All />
                     </Route>
-                    <Route path="/collections/art">
+                    {/* <Route path="/:category">
                      <Art />
                     </Route>
-                    <Route path="/defi">
+                    <Route path="/:category">
                      <Defi />
                     </Route>
-                    <Route path="/domain">
+                    <Route path="/:categoryn">
                      <Domain />
                     </Route>
-                    <Route path="/games">
+                    <Route path="/:category">
                      <Games />
                     </Route>
                     <Route path="/metaverse">
@@ -233,7 +237,7 @@ function HomePage() {
                     </Route>
                     <Route path="/?category=photo">
                      <Photography />
-                    </Route>
+                    </Route> */}
                   </Switch>
                 </div>
             </div>

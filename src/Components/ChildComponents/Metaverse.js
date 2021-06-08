@@ -1,5 +1,5 @@
 import React,  { useState } from 'react'
-import "./ChildComponent.scss"
+import "./childComponent.scss"
 import AuctionCard from '../AuctionCard/AuctionCard';
 import Button from '@material-ui/core/Button';
 

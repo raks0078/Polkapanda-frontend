@@ -3,9 +3,9 @@ import "./childComponent.scss"
 import AuctionCard from '../AuctionCard/AuctionCard';
 import Button from '@material-ui/core/Button';
 
-function Games() {
+function Memes() {
     const [lists, setlists] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,1])
-    const [visible, setvisible] = useState(3);
+    const [visible, setvisible] = useState(5);
 
     const loadMore=()=>{
 
@@ -29,4 +29,4 @@ function Games() {
     )
 }
 
-export default Games
+export default Memes

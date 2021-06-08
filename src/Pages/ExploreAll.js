@@ -7,6 +7,7 @@ import {
     Route,
     Link,
     useRouteMatch,
+    useParams,
 } from "react-router-dom";
 import TuneIcon from '@material-ui/icons/Tune';
 
@@ -34,6 +35,11 @@ import Checkbox from '@material-ui/core/Checkbox';
 import All from '../Components/ChildComponents/All';
 import Art from '../Components/ChildComponents/Art';
 import Defi from '../Components/ChildComponents/Defi';
+import Photography from '../Components/ChildComponents/Photography';
+import Metaverse from '../Components/ChildComponents/Metaverse';
+import Music from '../Components/ChildComponents/Music';
+import Domain from '../Components/ChildComponents/Domain';
+import Memes from '../Components/ChildComponents/Memes';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -89,6 +95,11 @@ function ExploreAll() {
         age: '',
         name: 'hai',
     });
+
+    const catego=useParams();
+    useEffect(() => {
+        console.log(catego.categoryd);
+     }, [])
 
     // functions..................................
     const handleChange = (event) => {
@@ -267,64 +278,78 @@ function ExploreAll() {
             </div>
             <div className="navigations">
             <div className="quickTabs">
-                  <div className="tabs">
-                    <h2>Explore</h2>
+                <div className="tabs">
                     <ul className="scrollBar">
                       
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/art`}><h5>Art</h5></Link>
+                        <Link to="/exploreAll/art"><h5>Art</h5></Link>
                         
                       </li>
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/Photography`} ><h5>Photography</h5></Link>
+                        <Link to="/exploreAll/Photography"><h5>Photography</h5></Link>
                         
                       </li>
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/Games`} ><h5>Games</h5></Link>
-                        
+                        <Link to="/exploreAll/Games"><h5>Games</h5></Link>
                       </li>
                      
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/Metaverses`}><h5>Metaverses</h5></Link>
+                        <Link to="/exploreAll/Metaverses"><h5>Metaverses</h5></Link>
+                      </li>
+                      <li className="filter">
+                        <TuneIcon />
+                        <Link to="/exploreAll/Music" ><h5>Music</h5></Link>
                         
                       </li>
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/Music`} ><h5>Music</h5></Link>
+                        <Link to="/exploreAll/Domain" ><h5>Domain</h5></Link>
                         
                       </li>
                       <li className="filter">
                         <TuneIcon />
-                        <Link to={`${match.url}/Domain`} ><h5>Domain</h5></Link>
-                        
-                      </li>
-                      <li className="filter">
-                        <TuneIcon />
-                        <Link to={`${match.url}/DeFi`} ><h5>DeFi</h5></Link>
+                        <Link to="/exploreAll/DeFi" ><h5>DeFi</h5></Link>
                       </li>
 
                       <li className="filter">
                         <TuneIcon />
-                        <Link to="/Memes"><h5>Memes</h5></Link>
-                        
+                        <Link to="/exploreAll/Memes"><h5>Memes</h5></Link>
                       </li>
                     </ul>
-                  </div>
-                  <Switch>
-                    <Route exact path="/">
-                      <All />
-                    </Route>
-                    <Route path={`${match.path}/art`}>
+                </div>
+                <div className="cards">
+                <Switch>
+                    <Route exact path="/exploreAll">
                       <Art />
                     </Route>
-                    <Route path={`${match.path}/DeFi`}>
+                    <Route exact path="/exploreAll/art">
+                      <Art />
+                    </Route>
+                    <Route path="/exploreAll/DeFi">
                       <Defi />
                     </Route>
+                    <Route path="/exploreAll/Photography">
+                      <Photography />
+                    </Route>
+                    <Route path="/exploreAll/Metaverses">
+                      <Metaverse />
+                    </Route>
+                    <Route path="/exploreAll/Music">
+                      <Music />
+                    </Route>
+                    <Route path="/exploreAll/Domain">
+                      <Domain />
+                    </Route>
+                    <Route path="/exploreAll/Memes">
+                      <Memes />
+                    </Route>
                   </Switch>
+                </div>
+                  
                 </div>
             </div>
         </div>

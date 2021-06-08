@@ -1,5 +1,5 @@
 import React,  { useState } from 'react'
-import "./ChildComponent.scss"
+import "./childComponent.scss"
 import AuctionCard from '../AuctionCard/AuctionCard';
 import Button from '@material-ui/core/Button';
 
@@ -15,7 +15,6 @@ function Art() {
 
     return (
         <div className="childComponent">
-            <h1>arts</h1>
             <div className="cards" >
             {lists.slice(0,visible).map((item,index)=> (
                 <div key={index}>

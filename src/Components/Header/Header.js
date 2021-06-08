@@ -1,4 +1,6 @@
 import React from 'react'
+import navIcon from "../../Assets/navIcon.png";
+import "./Header.scss";
 
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -223,14 +225,14 @@ function Header() {
     //   className={classes.DesktopDropDown}
     >
       <MenuItem onClick={handleMenuClose}><Link to="/exploreAll">Explore All</Link></MenuItem>
-      <MenuItem onClick={handleMenuClose}>Art</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Photography</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Games</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Metaverse</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Music</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Domains</MenuItem>
-      <MenuItem onClick={handleMenuClose}>DeFi</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Memes</MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Art">Art</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Photography">Photography</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Games">Games</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Metaverse">Metaverse</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Music">Music</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Domains">Domains</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/DeFi">DeFi</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/collection/Memes">Memes</Link></MenuItem>
     </Menu>
   );
 
@@ -273,10 +275,10 @@ function Header() {
       <AppBar position="static" className={classes.navBar}>
         <Toolbar>
         <Link to="/">
-        <img src="https://opensea.io/static/images/logos/opensea-logo.png" alt="OpenSea" className={classes.image} />
+        <img src={navIcon} alt="PolkaPanda" className={classes.image} />
         </Link>
           <Typography className={classes.title} variant="h5" noWrap>
-            OpenSea
+            Polkapanda
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
